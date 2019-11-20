@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import {useForm} from './useForm';
+import {Hello} from './hello';
 
 const App = () => {
   const [values, handleChange] = useForm({
@@ -7,15 +8,12 @@ const App = () => {
     password: '',
     firstName: ''
   });
+  const [showHello, setShowHello] = useState(true);
 
-  useEffect(() => {
-    console.log("render");
-  }, [values.email, values.password]); //does a shallow comparison of the values
-
-//useEffect can replace componentDidMount
-  
   return (
     <div className="App">
+      <button onClick={() => setShowHello(!showHello)}>toggle</button>
+      {showHello && <Hello/>}
       <input
         name="email"
         type="text"
