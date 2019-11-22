@@ -1,40 +1,24 @@
 import React, { useState } from 'react';
-import {useForm} from './useForm';
-import {Hello} from './hello';
 
 const App = () => {
-  const [values, handleChange] = useForm({
-    email: '',
-    password: '',
-    firstName: ''
-  });
-  const [showHello, setShowHello] = useState(true);
-
+  const [note, handleChange] = useState('');
+  const submittedNotes = [];  
   return (
     <div className="App">
-      <button onClick={() => setShowHello(!showHello)}>toggle</button>
-      {showHello && <Hello/>}
-      <input
-        name="email"
-        type="text"
-        value={values.email}
-        placeholder="email"
-        onChange={handleChange}
-        />
-      <input
-        name="firstName"
-        type="text"
-        value={values.firstName}
-        placeholder="first name"
-        onChange={handleChange}
-        />
+      <form>
+        Add Note:
         <input
-          name="password"
-          type="password"
-          value={values.password}
-          placeholder="password"          
-          onChange={handleChange}
-          />
+          name="note"
+          placeholder="note"
+          type="text"
+          onChange={e => handleChange(e.target.value)}
+          value={note}/>
+          <button
+            onClick={() => submittedNotes.push(note) && console.log(submittedNotes)}>
+            Submit
+          </button>
+      </form>
+      <h1>{note}</h1>
     </div>
   );
 };
