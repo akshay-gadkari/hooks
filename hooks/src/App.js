@@ -1,38 +1,37 @@
 import React, { useState } from 'react';
 
 const App = () => {
-  const [note, setNote] = useState('');
-  //const [notes, setNotes] = useState("");
-  const notes = [];
-  
-  // document.getElementById("myButton").addEventListener("click", function(event){
-  //   event.preventDefault();
-  // });
-  
+  let note = '';
+  let notes = [];
+
   function handleSubmit(e) {
     e.preventDefault();
     notes.push(note);
-    console.log("notes", notes);
-    // return false;
+    console.log(notes);
   };
   
   return (
     <div className="App">
       <form>
         Add Note:
-        <input
+        <br/>
+        <textarea
           name="note"
           placeholder="note"
+          id="myForm"
           type="text"
-          onChange={e => setNote(e.target.value)}
-          value={note}/>
+          onChange={e => note = (e.target.value)}
+          value={notes[0]}/>
+          <br/>
           <button
             id="myButton"
-            onClick={(e) => handleSubmit(e)}>
+            onClick={
+              (e) => handleSubmit(e)
+            }>
             Submit
           </button>
       </form>
-      <h1>{note}</h1>
+      <h1>{notes}</h1>
     </div>
   );
 };
