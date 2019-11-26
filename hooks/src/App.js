@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+//import React, { useState } from 'react';
+import './App.css';
 
 // class App extends React.Component {
 
@@ -49,16 +50,15 @@ import React, { useState } from 'react';
 
 // export default App;
 
+import React, { useState } from 'react';
+
 export default function App(props) {
   const [name, setName] = useState('');
   const [names, setNames] = useState([]);
   
   const handleSubmit = e => {
     e.preventDefault();
-    setNames([
-      ...names,
-      name
-    ]);
+    setNames([...names, name]);
   };
   
   return (
@@ -70,13 +70,13 @@ export default function App(props) {
           value={name}
           onChange={e => setName(e.target.value)}
           placeholder="name"/>
-          <button onClick={handleSubmit}>Add a name</button>
+          <button onClick={handleSubmit}>Add</button>
       </form>
-      <ul>
+      <div className="list">
         {names.map(name => (
-          <li>{name}</li>
+          <p className="item">{name}</p>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
