@@ -1,5 +1,5 @@
-//import React, { useState } from 'react';
-import './App.css';
+// import React, { useState } from 'react';
+// import './App.css';
 
 // class App extends React.Component {
 
@@ -51,16 +51,17 @@ import './App.css';
 // export default App;
 
 import React, { useState } from 'react';
+import './App.css';
 
 export default function App(props) {
   const [name, setName] = useState('');
   const [names, setNames] = useState([]);
-  
+
   const handleSubmit = e => {
     e.preventDefault();
     setNames([...names, name]);
   };
-  
+
   return (
     <div className="App">
       <form>

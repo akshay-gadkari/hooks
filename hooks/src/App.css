@@ -33,8 +33,6 @@
 .item {
   font-size: 20px;
   display: flex;
-  /* flex-flow: row wrap; */
-  /* min-width: 180px; */
-  /* height: 5px; */
   padding: 10px;
+  border: 1px solid black;
 }
