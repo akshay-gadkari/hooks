@@ -63,7 +63,8 @@ export default function App(props) {
   };
 
   return (
-    <div className="App">
+    <div className="App night dark-scheme">
+      <div className="night dark-scheme">Night (changes in dark scheme)</div>
       <form>
         <input
           name="name"
@@ -77,7 +78,7 @@ export default function App(props) {
         {names.map(name => (
           <p className="item">{name}</p>
         ))}
-      </div>
     </div>
+      </div>
   );
 };
