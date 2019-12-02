@@ -53,7 +53,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-export default function App(props) {
+export default function ListNames(props) {
   const [name, setName] = useState('');
   const [names, setNames] = useState([]);
 

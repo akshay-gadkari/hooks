@@ -5,14 +5,15 @@
 .list {
   display: flex;
   flex-flow: row wrap;
-  max-width: 100%
+  max-width: 100%;
+  border: 1px solid green;
 }
 
 .item {
   font-size: 20px;
   display: flex;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid red;
 }
 
 .day   { background: #eee; color: black; }
