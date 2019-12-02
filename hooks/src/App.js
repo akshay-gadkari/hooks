@@ -60,6 +60,7 @@ export default function ListNames(props) {
   const handleSubmit = e => {
     e.preventDefault();
     setNames([...names, name]);
+    setName('');
   };
 
   return (
