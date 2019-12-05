@@ -8,7 +8,9 @@ function reducer(state, action) { //pure function, so it's outside the App funct
     };
   case 'toggle-todo':
     return {
-      todos: state.todos.map((t, idx) => idx === action.idx ? {...t, completed: !t.completed} : t)
+      todos: state.todos.map((t, idx) =>
+                             idx === action.idx ? {...t, completed: !t.completed} : t
+                            )
     };
   default:
     return state;
@@ -30,9 +32,9 @@ const App = () => {
       {todos.map((t, idx) => (
         <div
           key={t.text}
-          onCLick={() => dispatch({type: 'toggle-todo', idx})}
+          onClick={() => dispatch({type: 'toggle-todo', idx})}
           style={{
-            textDecoration: t.completed ? 'line-through' : ''
+            textDecoration: t.completed ? "line-through" : ""
           }}
           >
           {t.text}
@@ -40,7 +42,7 @@ const App = () => {
       ))}
     <pre>
         {JSON.stringify(todos, null, 2)}
-        </pre>
+    </pre>
     </div>
   );
 };

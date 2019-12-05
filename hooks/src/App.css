@@ -1,38 +1,38 @@
-.App {
-  max-width: 100%;
-}
+/* .App { */
+/*   max-width: 100%; */
+/* } */
 
-.list {
-  display: flex;
-  flex-flow: row wrap;
-  max-width: 100%;
-  border: 1px solid green;
-}
+/* .list { */
+/*   display: flex; */
+/*   flex-flow: row wrap; */
+/*   max-width: 100%; */
+/*   border: 1px solid green; */
+/* } */
 
-.item {
-  font-size: 20px;
-  display: flex;
-  padding: 10px;
-  border: 1px solid red;
-}
+/* .item { */
+/*   font-size: 20px; */
+/*   display: flex; */
+/*   padding: 10px; */
+/*   border: 1px solid red; */
+/* } */
 
-.day   { background: #eee; color: black; }
-.night { background: #333; color: white; }
+/* .day   { background: #eee; color: black; } */
+/* .night { background: #333; color: white; } */
 
-@media (prefers-color-scheme: dark) {
-  .day.dark-scheme   { background:  #333; color: white; }
-  .night.dark-scheme { background: black; color:  #ddd; }
-}
+/* @media (prefers-color-scheme: dark) { */
+/*   .day.dark-scheme   { background:  #333; color: white; } */
+/*   .night.dark-scheme { background: black; color:  #ddd; } */
+/* } */
 
-@media (prefers-color-scheme: light) {
-  .day.light-scheme   { background: white; color:  #555; }
-  .night.light-scheme { background:  #eee; color: black; }
-}
+/* @media (prefers-color-scheme: light) { */
+/*   .day.light-scheme   { background: white; color:  #555; } */
+/*   .night.light-scheme { background:  #eee; color: black; } */
+/* } */
 
-.day, .night {
-  display: inline-block;
-  padding: 1em;
-  width: 7em;
-  height: 2em;
-  vertical-align: middle;
-}
+/* .day, .night { */
+/*   display: inline-block; */
+/*   padding: 1em; */
+/*   width: 7em; */
+/*   height: 2em; */
+/*   vertical-align: middle; */
+/* } */
