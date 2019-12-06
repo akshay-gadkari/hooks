@@ -8,15 +8,13 @@ function reducer(state, action) { //pure function, so it's outside the App funct
     };
   case 'toggle-todo':
     return {
-      todos: state.todos.map((t, idx) =>
-                             idx === action.idx ? {...t, completed: !t.completed} : t
-                            )
+      todos: state.todos.map((t, idx) => idx === action.idx ? {...t, completed: !t.completed} : t)
     };
   default:
     return state;
   }
 }
- 
+
 const App = () => {
   const [{todos}, dispatch] = useReducer(reducer, {todos: []});
   const [text, setText] = useState();
@@ -40,9 +38,9 @@ const App = () => {
           {t.text}
         </div>
       ))}
-    <pre>
+    {/* }<pre>
         {JSON.stringify(todos, null, 2)}
-    </pre>
+        </pre> */}
     </div>
   );
 };
